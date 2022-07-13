@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: $mainFont;
+}
+
+.container {
+  width: 100%;
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.button {
+  font-size: 15px;
+  font-weight: 700;
+  background: $accent-green;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0 0 0 2px $primary-color;
+  }
+  &:active {
+    transition: background 0s;
+    background: $primary-color;
+  }
+}
+
+@import 'imports';
+
+
