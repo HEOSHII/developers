@@ -1,29 +1,29 @@
 const banner = document.querySelector('.banner');
-const bannerBackgorundItems = document.querySelectorAll('.banner-background-item');
-let x, y;
-window.addEventListener('mousemove', e => {
-  console.log(window.innerWidth);
-  if (e.clientX > window.innerWidth / 2) {
-    x = (e.clientX - window.innerWidth / 2) / 50;
-  } else {
-    x = -(window.innerWidth / 2 - e.clientX) / 50;
-  }
-  if (e.clientY > window.innerHeight / 2) {
-    y = (e.clientY - window.innerHeight / 2) / 50;
-  } else {
-    y = -(window.innerHeight / 2 - e.clientY) / 50;
-  }
+const bannerBackgorundItems = document.querySelectorAll('.banner__background-item');
+
+window.addEventListener('mousemove', event => {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+  const mouseMoveX = event.clientX;
+  const mouseMoveY = event.clientY;
+  const shiftFactor = 50;
+  const x =
+    mouseMoveX > centerX
+      ? (mouseMoveX - centerX) / shiftFactor
+      : -(centerX - mouseMoveX) / shiftFactor;
+  const y =
+    mouseMoveY > centerY
+      ? (mouseMoveY - centerY) / shiftFactor
+      : -(centerY - mouseMoveY) / shiftFactor;
   moveItem(bannerBackgorundItems, x, y);
 });
 
 function moveItem(items, x, y) {
   items.forEach(item => {
     const distance = item.dataset.distance;
-    if (distance) {
-      console.log(distance);
-      item.style = `transform: translate(${x / distance}px,${y / distance}px)`;
-    } else {
-      item.style = `transform: translate(${x}px,${y}px)`;
-    }
+    const reverse = item.dataset.reverse;
+    item.style = reverse
+      ? `transform: scaleX(-1) translate(${-x / distance}px,${y / distance}px)`
+      : `transform: translate(${x / distance}px,${y / distance}px)`;
   });
 }
