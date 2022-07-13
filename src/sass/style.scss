@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +15,12 @@
   padding: 0 10px;
 }
 
+h1 {
+  color: #484848;
+}
+
 .button {
+  width: max-content;
   font-size: 15px;
   font-weight: 700;
   background: $accent-green;
@@ -27,7 +34,7 @@
   cursor: pointer;
   transition: all 0.2s;
   &:hover {
-    box-shadow: 0 0 0 2px $primary-color;
+    box-shadow: inset 0 0 0 2px $primary-color;
   }
   &:active {
     transition: background 0s;
@@ -36,5 +43,3 @@
 }
 
 @import 'imports';
-
-

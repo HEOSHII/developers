@@ -61,7 +61,7 @@
 .header__button {
   padding: 10px 42px;
   &:hover {
-    box-shadow: 0 0 0 2px white;
+    box-shadow: inset 0 0 0 2px white;
   }
   &:active {
     transition: background 0s;
