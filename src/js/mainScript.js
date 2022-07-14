@@ -24,10 +24,7 @@ const getCoord = (mouse, center) =>
 
 const moveItems = (items, x, y) => {
   items.forEach(item => {
-    const distance = item.dataset.distance || 1;
-    const reverse = item.dataset.reverse;
-    item.style = reverse
-      ? `transform: scaleX(-1) translate(${-x / distance}px,${y / distance}px)`
-      : `transform: translate(${x / distance}px,${y / distance}px)`;
+    const distance = Number(item.dataset.distance) || 1;
+    item.style = `transform: translate(${x / distance}px,${y / distance}px)`;
   });
 };

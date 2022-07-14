@@ -1,8 +1,10 @@
 const banner = document.querySelector('.banner__content');
 const accordeon = document.querySelector('.included__accordeon');
 const slider = document.querySelector('.dev-steps__slider');
+const examples = document.querySelector('.examples__shops');
+const moreInfo = document.querySelector('.more-info__image');
 
-const shiftFactor = 50;
+const shiftFactor = 35; //shift of moving background items
 
 const renderData = {
   bannerBackgroundImages: [
@@ -44,7 +46,7 @@ const renderData = {
     },
     {
       name: 'purple-wave',
-      src: './dist/img/purple-wave.svg',
+      src: './dist/img/purple-wave-reverse.svg',
       class: 'banner__purple-wave-2',
       distance: 0.7,
     },
@@ -53,6 +55,47 @@ const renderData = {
       src: './dist/img/blured-cylinder.svg',
       class: 'banner__blured-cylinder',
       distance: 10,
+    },
+  ],
+  moreInfoBackgroundImages: [
+    {
+      name: 'pink-sphere',
+      src: './dist/img/pink-sphere.svg',
+      class: 'more-info__pink-sphere',
+      distance: 2,
+    },
+
+    {
+      name: 'blue-sphere',
+      src: './dist/img/blue-sphere.svg',
+      class: 'more-info__blue-sphere',
+      distance: 5,
+    },
+
+    {
+      name: 'watches',
+      src: './dist/img/watches.svg',
+      class: 'more-info__watches',
+      distance: 0.8,
+    },
+
+    {
+      name: 'blured-cylinder',
+      src: './dist/img/blured-cylinder-reverse.svg',
+      class: 'more-info__blured-cylinder',
+      distance: 0.3,
+    },
+    {
+      name: 'blured--pink-wave',
+      src: './dist/img/blured--pink-wave.svg',
+      class: 'more-info__blured--pink-wave',
+      distance: 7,
+    },
+    {
+      name: 'taper',
+      src: './dist/img/taper.svg',
+      class: 'more-info__taper',
+      distance: 3,
     },
   ],
   accordeon: [
@@ -112,6 +155,14 @@ const renderData = {
       image: './dist/img/testing.png',
       alt: 'testing',
     },
+  ],
+  examples: [
+    { name: 'Онлайн-магазин', info: 'для оптовых покупок', image: './dist/img/shop-1.jpeg' },
+    { name: 'Онлайн-магазин', info: 'для флористов', image: './dist/img/shop-2.jpeg' },
+    { name: 'Онлайн-магазин', info: 'для парикмахеров', image: './dist/img/shop-3.jpeg' },
+    { name: 'Онлайн-магазин', info: 'для визажистов', image: './dist/img/shop-4.jpeg' },
+    { name: 'Онлайн-магазин', info: 'для кондитеров', image: './dist/img/shop-5.jpeg' },
+    { name: 'Онлайн-магазин', info: 'для художников', image: './dist/img/shop-6.jpeg' },
   ],
 };
 

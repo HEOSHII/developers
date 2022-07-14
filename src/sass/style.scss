@@ -43,4 +43,9 @@ h1 {
   }
 }
 
+.background-item {
+  position: absolute;
+  transition: all 1s ease-out;
+}
+
 @import 'imports';
