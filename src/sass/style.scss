@@ -9,6 +9,10 @@
   color: $main-text-color;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   max-width: $maxWidthContainer;
@@ -21,6 +25,7 @@ h1 {
 }
 
 .button {
+  text-decoration: none;
   width: max-content;
   font-size: 15px;
   font-weight: 700;

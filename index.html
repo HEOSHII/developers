@@ -13,17 +13,17 @@
         <a href="#" class="header__logo"><img src="./dist/img/brand-logo.svg" alt="logo" /></a>
         <div class="header__menu">
           <ul class="header__list">
-            <li class="header__link"><a href="#">Услуги</a></li>
-            <li class="header__link"><a href="#">Портфолио</a></li>
-            <li class="header__link"><a href="#">Этапы</a></li>
-            <li class="header__link"><a href="#">Дизайнеры</a></li>
+            <li class="header__link"><a href="#included">Услуги</a></li>
+            <li class="header__link"><a href="#examples">Портфолио</a></li>
+            <li class="header__link"><a href="#steps">Этапы</a></li>
+            <li class="header__link"><a href="#more-info">Дизайнеры</a></li>
           </ul>
-          <button class="header__button button">Заказать</button>
+          <a class="header__button button" href="#feedback">Заказать</a>
         </div>
       </div>
     </header>
     <main>
-      <section class="banner">
+      <section class="banner" id="banner">
         <div class="banner__content container">
           <div class="banner__info">
             <div class="banner__text">
@@ -34,7 +34,7 @@
                 Designers
               </p>
             </div>
-            <div class="banner__button button">Заказать</div>
+            <a class="banner__button button" href="#feedback">Заказать</a>
           </div>
           <div class="banner__image">
             <img src="./dist/img/market-cart.svg" alt="Market Cart" />
@@ -45,7 +45,7 @@
         <!-- there will input background paralax images by JS -->
       </section>
 
-      <section class="included">
+      <section class="included" id="included">
         <div class="included__content container">
           <h2 class="included__title title">
             Что входит в услугу по созданию дизайна интернет-магазина?
@@ -57,7 +57,7 @@
         <img class="background-item included__bag" src="./dist/img/bag.svg" alt="bag" />
       </section>
 
-      <section class="dev-steps">
+      <section class="dev-steps" id="steps">
         <div class="dev-steps__content container">
           <h2 class="dev-steps__title title">Этапы разработки интернет-магазина</h2>
           <div class="dev-steps__slider">
@@ -82,7 +82,7 @@
         />
       </section>
 
-      <section class="examples">
+      <section class="examples" id="examples">
         <div class="examples__content container">
           <h2 class="title examples__title">Примеры онлайн-магазинов</h2>
           <div class="examples__shops">
@@ -103,7 +103,7 @@
         />
       </section>
 
-      <section class="more-info">
+      <section class="more-info" id="more-info">
         <div class="more-info__content container">
           <div class="more-info__inner">
             <div class="more-info__description">
@@ -115,7 +115,7 @@
                 визуализировать ваш веб проект.
               </p>
             </div>
-            <button class="button more-info__button">Оставить заявку</button>
+            <a class="button more-info__button" href="#feedback">Оставить заявку</a>
           </div>
           <div class="more-info__image">
             <img class="more-ingo__order" src="./dist/img/order.png" alt="order" />
@@ -130,7 +130,7 @@
         />
       </section>
 
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="feedback__content container">
           <h2 class="feedback__title title">Обсудить проект</h2>
           <p class="feedback__text text">
@@ -198,6 +198,51 @@
         />
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__content container">
+        <div class="footer__info">
+          <a href="#" class="footer__logo">
+            <img src="./dist/img/brand-logo.svg" alt="logo" />
+          </a>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/instagram.svg" alt="instagram" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/facebook.svg" alt="facebook" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/telegram.svg" alt="telegram" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/viber.svg" alt="viber" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/whatsapp.svg" alt="whatsapp" />
+            </a>
+          </div>
+          <div class="footer__numbers">
+            <a class="number__item" type="tel" href="tel:+380505859409">
+              <img class="number__logo" src="./dist/img/viber.svg" alt="viber" />
+              <p class="numer__name">Валерия:</p>
+              <p>+380505859409</p>
+            </a>
+            <a class="number__item" type="tel" href="tel:+380505859409">
+              <img class="number__logo" src="./dist/img/viber.svg" alt="viber" />
+              <p class="numer__name">Анна:</p>
+              <p>+380505859409</p>
+            </a>
+            <a class="number__item" type="tel" href="tel:+380505859409">
+              <img class="number__logo" src="./dist/img/viber.svg" alt="viber" />
+              <p class="numer__name">Валерия:</p>
+              <p>+380505859409</p>
+            </a>
+          </div>
+          <a class="footer__email" href="#" type="email">hr@dv-s.com</a>
+        </div>
+        <div class="footer__rights"><a href="#">Developers</a> 2018-2022 © All rights reserved</div>
+      </div>
+    </footer>
     <script src="dist/js/mainScript.min.js"></script>
   </body>
 </html>
