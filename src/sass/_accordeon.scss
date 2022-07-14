@@ -3,11 +3,13 @@
   padding: 120px 0;
   position: relative;
 }
+.title {
+  font-size: 32px;
+  font-weight: 800;
+}
 .included__title {
   width: max-content;
   margin: 0 auto;
-  font-size: 32px;
-  font-weight: 800;
 }
 
 .included__accordeon {
@@ -107,7 +109,6 @@
 }
 
 .included__bag {
-  position: absolute;
   right: 145px;
   bottom: 92px;
   z-index: 0;
