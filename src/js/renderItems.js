@@ -74,5 +74,4 @@ renderData.moreInfoBackgroundImages.forEach(item => {
   image.dataset.distance = item.distance;
   image.setAttribute('alt', item.name);
   moreInfo.appendChild(image);
-  console.log(item.distance);
 });

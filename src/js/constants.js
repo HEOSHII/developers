@@ -1,10 +1,20 @@
 const banner = document.querySelector('.banner__content');
+
 const accordeon = document.querySelector('.included__accordeon');
+
 const slider = document.querySelector('.dev-steps__slider');
+const sliderNextButton = document.querySelector('.next');
+const sliderPrevButton = document.querySelector('.prev');
+
 const examples = document.querySelector('.examples__shops');
+
 const moreInfo = document.querySelector('.more-info__image');
 
-const shiftFactor = 35; //shift of moving background items
+const form = document.querySelector('.feedback__form');
+const formButton = document.querySelector('.feedback__button');
+const feedbackInputs = document.querySelectorAll('.feedback__input');
+
+const shiftFactor = 15; //shift of moving background items
 
 const renderData = {
   bannerBackgroundImages: [
@@ -76,7 +86,7 @@ const renderData = {
       name: 'watches',
       src: './dist/img/watches.svg',
       class: 'more-info__watches',
-      distance: 0.8,
+      distance: 2,
     },
 
     {
@@ -165,7 +175,3 @@ const renderData = {
     { name: 'Онлайн-магазин', info: 'для художников', image: './dist/img/shop-6.jpeg' },
   ],
 };
-
-const sliderNextButton = document.querySelector('.next');
-const sliderPrevButton = document.querySelector('.prev');
-let currentStep = 0;

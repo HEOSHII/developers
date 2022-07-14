@@ -71,15 +71,21 @@
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s, transform 0.1s;
   &.prev {
     transform: rotate(180deg);
+    &:active {
+      transform: scale(0.95) rotate(180deg);
+    }
   }
   &:hover {
     background: $primary-color;
     background-image: url(../img/slider-arrow-hover.png);
     background-repeat: no-repeat;
     background-position: center center;
+  }
+  &:active {
+    transform: scale(0.95);
   }
 }
 
