@@ -164,7 +164,6 @@
                 placeholder="Имя"
                 minlength="3"
                 pattern="[A-Za-zА-Яа-яЁё]+"
-                required
               />
               <p class="feedback__error">*только буквы от 3х символов</p>
             </label>
@@ -176,9 +175,7 @@
                 id="telegram"
                 name="tg"
                 placeholder="Telegram/Viber"
-                minlength="3"
                 pattern="[A-Za-z]+"
-                required
               />
               <p class="feedback__error">*только латинские от 3х символов</p>
             </label>
@@ -191,12 +188,10 @@
                 name="email"
                 placeholder="Email"
                 pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
-                required
               />
               <p class="feedback__error">*только email</p>
             </label>
             <button class="feedback__button button" type="submit">Отправить</button>
-            <!-- <button class="feedback__button button" type="button">Отправить</button> -->
           </form>
           <img class="feedback__call-mobile" src="./dist/img/call-mobile.svg" alt="call-mobile" />
         </div>

@@ -20,7 +20,7 @@ function isAllValid() {
   let countvalid = 0;
   const inputs = document.querySelectorAll('.feedback__input');
   inputs.forEach(input => {
-    countvalid = input.validity.valid ? countvalid + 1 : countvalid;
+    countvalid = input.validity.valid && input.value ? countvalid + 1 : countvalid;
   });
   return countvalid === 3;
 }
