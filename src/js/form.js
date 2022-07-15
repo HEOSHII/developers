@@ -1,7 +1,7 @@
 formButton.classList.add('invalid');
 
 feedbackInputs.forEach(input => {
-  input.addEventListener('input', () => {
+  input.addEventListener('input', event => {
     isAllValid() ? formButton.classList.remove('invalid') : formButton.classList.add('invalid');
   });
 });

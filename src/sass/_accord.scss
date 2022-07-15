@@ -74,9 +74,6 @@
   flex-direction: column;
   gap: 10px;
   padding-bottom: 10px;
-  &:hover {
-    transform: scale(1.01);
-  }
 }
 
 .accord__arrow {
@@ -88,7 +85,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-10%);
-  right: -25px;
+  right: 20px;
   &::before,
   &::after {
     content: '';

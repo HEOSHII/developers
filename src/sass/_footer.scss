@@ -36,6 +36,9 @@
   display: flex;
   width: max-content;
   gap: 40px;
+  &-mobile {
+    display: none;
+  }
 }
 
 .footer__numbers {

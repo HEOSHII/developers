@@ -163,9 +163,10 @@
                 name="name"
                 placeholder="Имя"
                 minlength="3"
+                pattern="[A-Za-zА-Яа-яЁё]+"
                 required
               />
-              <p class="feedback__error">*длина от 3х символов</p>
+              <p class="feedback__error">*только буквы от 3х символов</p>
             </label>
 
             <label class="feedback__label" for="telegram">
@@ -176,9 +177,10 @@
                 name="tg"
                 placeholder="Telegram/Viber"
                 minlength="3"
+                pattern="[A-Za-z]+"
                 required
               />
-              <p class="feedback__error">*длина от 3х символов</p>
+              <p class="feedback__error">*только латинские от 3х символов</p>
             </label>
 
             <label for="email" class="feedback__label" for="email">
@@ -188,9 +190,10 @@
                 type="email"
                 name="email"
                 placeholder="Email"
+                pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
                 required
               />
-              <p class="feedback__error">*неверный email</p>
+              <p class="feedback__error">*только email</p>
             </label>
             <button class="feedback__button button" type="submit">Отправить</button>
             <!-- <button class="feedback__button button" type="button">Отправить</button> -->
@@ -240,6 +243,23 @@
               <img src="./dist/img/whatsapp.svg" alt="whatsapp" />
             </a>
           </div>
+          <div class="footer__social footer__social-mobile">
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/facebook-mobile.svg" alt="facebook" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/telegram-mobile.svg" alt="telegram" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/viber-mobile.svg" alt="viber" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/instagram-mobile.svg" alt="instagram" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="./dist/img/whatsapp-mobile.svg" alt="whatsapp" />
+            </a>
+          </div>
           <div class="footer__numbers">
             <a class="number__item" type="tel" href="tel:+380505859409">
               <img class="number__logo" src="./dist/img/viber.svg" alt="viber" />
@@ -257,7 +277,7 @@
               <p>+380505859409</p>
             </a>
           </div>
-          <a class="footer__email" href="#" type="email">hr@dv-s.com</a>
+          <a class="footer__email" href="mailto:hr@dv-s.com" type="email">hr@dv-s.com</a>
         </div>
         <div class="footer__rights"><a href="#">Developers</a> 2018-2022 © All rights reserved</div>
       </div>
