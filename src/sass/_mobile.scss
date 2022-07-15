@@ -200,13 +200,14 @@
   }
 
   .accord__item {
+    padding-right: 50px;
     &:hover {
       transform: scale(1);
     }
   }
 
   .accord__title {
-    font-size: 19px;
+    font-size: 20px;
     &::before {
       min-width: 15px;
       min-height: 15px;
