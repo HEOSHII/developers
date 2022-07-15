@@ -7,7 +7,12 @@ feedbackInputs.forEach(input => {
 });
 
 form.onsubmit = event => {
-  event.preventDefault();
+  if (!isAllValid()) {
+    feedbackInputs.forEach(input => {
+      input.setAttribute('required', 'required');
+    });
+    return event.preventDefault();
+  }
   const result = {};
   const formData = new FormData(form);
   for (const item of formData.entries()) {
