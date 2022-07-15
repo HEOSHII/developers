@@ -89,11 +89,15 @@
         />
       </section>
 
-      <section class="examples" id="examples" style="display: none">
+      <section class="examples" id="examples">
         <div class="examples__content container">
           <h2 class="title examples__title">Примеры онлайн-магазинов</h2>
           <div class="examples__shops">
             <!-- there will render exaples items -->
+          </div>
+          <div class="dev-steps__arrows examples__arrows">
+            <button class="dev-steps__slider-arrow exaples__prev"></button>
+            <button class="dev-steps__slider-arrow exaples__next"></button>
           </div>
         </div>
         <img
@@ -110,11 +114,12 @@
         />
       </section>
 
-      <section class="more-info" id="more-info" style="display: none">
+      <section class="more-info" id="more-info">
         <div class="more-info__content container">
           <div class="more-info__inner">
             <div class="more-info__description">
               <h3 class="more-info__title title">Необходимо больше информации?</h3>
+              <img class="more-info__image-mobile" src="./dist/img/order-mobile.svg" alt="order" />
               <p class="more-info__text">
                 Если Вы владелец онлайн-магазина или только начинаете свой путь в электронной
                 коммерции и вам нужен уникальный дизайн онлайн магазина для стартапа, обратитесь к
@@ -135,12 +140,18 @@
           alt="blue-sphere"
           data-distance="1"
         />
+        <img
+          class="background-item more-info__light-blue-sphere--main"
+          src="./dist/img/light-blue-sphere.svg "
+          alt="blue-sphere"
+          data-distance="1"
+        />
       </section>
 
-      <section class="feedback" id="feedback" style="display: none">
+      <section class="feedback" id="feedback">
         <div class="feedback__content container">
           <h2 class="feedback__title title">Обсудить проект</h2>
-          <p class="feedback__text text">
+          <p class="feedback__text subtitle">
             Расскажите о своих бизнес-целях и мы поможем вам в их достижении
           </p>
           <form class="feedback__form form" action="">
@@ -184,6 +195,7 @@
             <button class="feedback__button button" type="submit">Отправить</button>
             <!-- <button class="feedback__button button" type="button">Отправить</button> -->
           </form>
+          <img class="feedback__call-mobile" src="./dist/img/call-mobile.svg" alt="call-mobile" />
         </div>
         <img
           class="background-item feedback__phone"
@@ -205,7 +217,7 @@
         />
       </section>
     </main>
-    <footer class="footer" style="display: none">
+    <footer class="footer">
       <div class="footer__content container">
         <div class="footer__info">
           <a href="#" class="footer__logo">

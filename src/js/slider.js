@@ -16,3 +16,23 @@ sliderPrevButton.addEventListener('click', () => {
 function moveSlider(current, size) {
   slider.style = `left: -${size * current}px`;
 }
+
+let shop = 0;
+shopsNextButton.onclick = () => {
+  if (shop === 1) {
+    examples.style = 'transform: translateX(0)';
+    shop = 0;
+  } else {
+    examples.style = 'transform: translateX(-100vw)';
+    shop++;
+  }
+};
+shopsPrevButton.onclick = () => {
+  if (shop === 0) {
+    examples.style = 'transform: translateX(-100vw)';
+    shop = 1;
+  } else {
+    examples.style = 'transform: translateX(0)';
+    shop--;
+  }
+};

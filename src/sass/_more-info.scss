@@ -12,6 +12,9 @@
   position: relative;
   display: flex;
   justify-content: center;
+  &-mobile {
+    display: none;
+  }
 }
 
 .more-info__text {
@@ -39,6 +42,9 @@
     top: 150px;
     left: 150px;
   }
+}
+.more-info__light-blue-sphere--main {
+  display: none;
 }
 .more-info__watches {
   top: -10%;

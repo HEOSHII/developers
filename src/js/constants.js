@@ -6,6 +6,9 @@ const slider = document.querySelector('.dev-steps__slider');
 const sliderNextButton = document.querySelector('.next');
 const sliderPrevButton = document.querySelector('.prev');
 
+const shopsNextButton = document.querySelector('.exaples__next');
+const shopsPrevButton = document.querySelector('.exaples__prev');
+
 const examples = document.querySelector('.examples__shops');
 
 const moreInfo = document.querySelector('.more-info__image');
