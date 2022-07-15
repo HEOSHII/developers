@@ -164,6 +164,7 @@
                 placeholder="Имя"
                 minlength="3"
                 pattern="[A-Za-zА-Яа-яЁё]+"
+                title="Используйте только латинские символы и киррилицу"
               />
               <p class="feedback__error">*только буквы от 3х символов</p>
             </label>
@@ -176,9 +177,9 @@
                 name="tg"
                 placeholder="Telegram/Viber"
                 pattern="[A-Za-z]+"
-                
+                title="Используйте только латинские"
               />
-              <p class="feedback__error">*только латинские от 3х символов</p>
+              <p class="feedback__error">*только латинские символы</p>
             </label>
 
             <label for="email" class="feedback__label" for="email">
@@ -189,6 +190,7 @@
                 name="email"
                 placeholder="Email"
                 pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                title="Пример: example@gmail.com"
               />
               <p class="feedback__error">*только email</p>
             </label>
