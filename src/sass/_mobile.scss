@@ -1,6 +1,6 @@
 @media (max-width: 900px) {
   body {
-    overflow: auto;
+    overflow: visible;
     &.menu-opened {
       overflow: hidden;
       .header__menu {
@@ -19,9 +19,7 @@
   }
 
   .header__menu {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
