@@ -1,0 +1,268 @@
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+    &.menu-opened {
+      overflow: hidden;
+      .header__menu {
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1);
+      }
+      .header__burger {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .header {
+    top: 0;
+  }
+
+  .header__menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $primary-color;
+    z-index: 55;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s;
+    transform: scale(0.8);
+    justify-content: center;
+  }
+
+  .header__list {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 44px;
+    a {
+      text-transform: uppercase;
+      font-size: 17px;
+      font-weight: 800;
+    }
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__burger {
+    min-height: 100%;
+    display: flex;
+    position: relative;
+    z-index: 56;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .burder__dot {
+    width: 13px;
+    height: 13px;
+    background: white;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  .title {
+    font-size: 23px;
+  }
+  .header {
+    padding: 5px 0;
+  }
+  // ----------- BANNER
+  .banner {
+    padding: 80px 0 50px 0;
+  }
+
+  .banner__content {
+    flex-direction: column-reverse;
+  }
+
+  .banner__image {
+    // width: 100%;
+    width: 210px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      transform: rotate(15deg);
+    }
+  }
+
+  .banner__info {
+    width: 100%;
+    margin-top: 0;
+    gap: 34px;
+  }
+
+  .banner__title {
+    text-transform: uppercase;
+    font-size: 26px;
+    color: black;
+    line-height: 32px;
+  }
+
+  .banner__button {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 17px 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .banner__ellipse-1 {
+    border: 2px solid $accent-green;
+    top: 30px;
+    width: 75px;
+    height: 55px;
+  }
+
+  .banner__ellipse-2 {
+    width: 360px;
+    height: 240px;
+    top: 50px;
+  }
+
+  .banner__blue-cylinder {
+    display: none;
+  }
+
+  .banner__purple-wave-1 {
+    top: 25%;
+    left: 0;
+    transform: scaleX(-1);
+    width: 67px;
+    height: 27px;
+  }
+
+  .banner__purple-wave-2 {
+    width: 91px;
+    height: 33px;
+    top: 45px;
+    right: 15%;
+  }
+
+  .banner__blue-wave {
+    width: 78px;
+    height: 28px;
+    top: 12%;
+    left: 20%;
+  }
+
+  .banner__blured-cylinder {
+    width: 66px;
+    height: 35px;
+    right: 20%;
+    top: 23%;
+    z-index: 3;
+  }
+
+  .banner__blue-sphere-2 {
+    top: 15%;
+    right: 20%;
+    width: 24px;
+    height: 24px;
+  }
+
+  .banner__purple-sphere {
+    top: 80%;
+    right: 7%;
+    width: 15px;
+    height: 15px;
+  }
+
+  //--------- INCLUDED
+  .included {
+    padding: 16px 0 30px 0;
+  }
+
+  .included__bag {
+    display: none;
+  }
+
+  // ACCORD
+  .accord {
+    margin-top: 15px;
+  }
+
+  .accord__item {
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  .accord__title {
+    font-size: 19px;
+    &::before {
+      min-width: 15px;
+      min-height: 15px;
+    }
+  }
+
+  .accord__inner {
+    margin-left: 22px;
+    padding: 0 40px 0 25px;
+  }
+
+  //dev-steps
+  .dev-steps {
+    padding: 45px 0;
+  }
+
+  .dev-steps__slider {
+    margin-top: 20px;
+  }
+
+  .dev-steps__slider-item {
+    min-width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 30px 30px 0;
+    gap: 0;
+  }
+
+  .slider__main {
+    width: 100%;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+
+  .slider__text,
+  .slider__image {
+    margin: auto 0;
+    width: auto;
+    flex: none;
+  }
+  .slider__title {
+    font-size: 17px;
+  }
+
+  .slider__light-blue-sphere {
+    width: 38px;
+    height: 38px;
+    top: 18px;
+    left: -17px;
+  }
+
+  .slider__blue-wave {
+    display: none;
+  }
+  .dev-steps__arrows {
+    margin: 25px auto 0;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 376px) {
+  .header__logo {
+    transform: translateX(-8px);
+    width: 136px;
+    height: 35px;
+  }
+}

@@ -20,6 +20,11 @@
           </ul>
           <a class="header__button button" href="#feedback">Заказать</a>
         </div>
+        <div class="header__burger">
+          <div class="burder__dot"></div>
+          <div class="burder__dot"></div>
+          <div class="burder__dot"></div>
+        </div>
       </div>
     </header>
     <main>
@@ -50,8 +55,10 @@
           <h2 class="included__title title">
             Что входит в услугу по созданию дизайна интернет-магазина?
           </h2>
-          <div class="included__accordeon">
-            <!-- there will input accordeon items by JS -->
+          <div class="accord">
+            <ul class="accord__list">
+              <!-- there will input accordeon items by JS -->
+            </ul>
           </div>
         </div>
         <img class="background-item included__bag" src="./dist/img/bag.svg" alt="bag" />
@@ -82,7 +89,7 @@
         />
       </section>
 
-      <section class="examples" id="examples">
+      <section class="examples" id="examples" style="display: none">
         <div class="examples__content container">
           <h2 class="title examples__title">Примеры онлайн-магазинов</h2>
           <div class="examples__shops">
@@ -103,7 +110,7 @@
         />
       </section>
 
-      <section class="more-info" id="more-info">
+      <section class="more-info" id="more-info" style="display: none">
         <div class="more-info__content container">
           <div class="more-info__inner">
             <div class="more-info__description">
@@ -130,7 +137,7 @@
         />
       </section>
 
-      <section class="feedback" id="feedback">
+      <section class="feedback" id="feedback" style="display: none">
         <div class="feedback__content container">
           <h2 class="feedback__title title">Обсудить проект</h2>
           <p class="feedback__text text">
@@ -198,7 +205,7 @@
         />
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" style="display: none">
       <div class="footer__content container">
         <div class="footer__info">
           <a href="#" class="footer__logo">

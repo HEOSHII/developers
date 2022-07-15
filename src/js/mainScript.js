@@ -16,7 +16,7 @@ window.addEventListener('mousemove', event => {
   };
   //GET ALL BACKGROUND IMAGES
   const allBackgorundItems = document.querySelectorAll('.background-item');
-  moveItems(allBackgorundItems, move.x, move.y);
+  window.innerWidth > 768 ? moveItems(allBackgorundItems, move.x, move.y) : null;
 });
 
 const getCoord = (mouse, center) =>
@@ -28,3 +28,8 @@ const moveItems = (items, x, y) => {
     item.style = `transform: translate(${x / distance}px,${y / distance}px)`;
   });
 };
+
+const menuLinks = document.querySelectorAll('.header__link');
+menuLinks.forEach(link => {
+  link.onclick = () => document.body.classList.remove('menu-opened');
+});

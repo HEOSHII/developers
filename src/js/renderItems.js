@@ -10,30 +10,19 @@ renderData.bannerBackgroundImages.forEach(item => {
 
 //CREATE ACCORDEON ITEMS
 renderData.accordeon.forEach(item => {
-  const acordionItem = document.createElement('div');
+  const acordionItem = document.createElement('li');
+  acordionItem.className = 'accord__item';
   acordionItem.innerHTML = `
-              <div class="accordeon__item">
-                <div class="accordeon__name">
-                  <div class="accordeon__info">
-                    <div class="accordeon__indicator"></div>
-                    <p class="accordeon__title">${item.title}</p>
-                  </div>
-                  <img class="accordeon__arrow" src="./dist/img/slider-arrow.svg" alt="arrow" />
-                </div>
-                <div class="panel">
-                  <p class="panel__text">
+                <input type="checkbox" checked />
+                <h2 class="accord__title">
+                  <i class="accord__arrow"></i>
+                  ${item.title}
+                </h2>
+                <p class="accord__inner">
                   ${item.text}
-                  </p>
-                </div>
-              </div>
+                </p>
     `;
-  accordeon.appendChild(acordionItem);
-});
-const accordeonItems = document.querySelectorAll('.accordeon__item');
-accordeonItems.forEach(item => {
-  item.addEventListener('click', event => {
-    event.target.classList.toggle('open');
-  });
+  accord.appendChild(acordionItem);
 });
 
 //CREATE SLIDER ITEMS
