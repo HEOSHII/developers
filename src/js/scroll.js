@@ -1,4 +1,4 @@
-const offsets = {
+const offsetTop = {
   included: document.querySelector('.included').offsetTop,
   devSteps: document.querySelector('.dev-steps').offsetTop,
   examples: document.querySelector('.examples').offsetTop,
@@ -14,17 +14,16 @@ const links = {
 const headerList = document.querySelector('.header__list');
 
 window.onscroll = function () {
-  const scrolled = this.pageYOffset;
-  console.log(scrolled, offsets);
-  scrolled >= offsets.included && scrolled < offsets.devSteps
+  const scrolled = this.pageYOffset - 10;
+  scrolled >= offsetTop.included && scrolled < offsetTop.devSteps
     ? links.included.classList.add('active')
     : links.included.classList.remove('active');
 
-  scrolled >= offsets.devSteps && scrolled < offsets.examples
+  scrolled >= offsetTop.devSteps && scrolled < offsetTop.examples
     ? links.devSteps.classList.add('active')
     : links.devSteps.classList.remove('active');
 
-  scrolled >= offsets.examples && scrolled < offsets.moreInfo
+  scrolled >= offsetTop.examples && scrolled < offsetTop.moreInfo
     ? links.examples.classList.add('active')
     : links.examples.classList.remove('active');
 };

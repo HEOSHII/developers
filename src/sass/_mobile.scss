@@ -374,6 +374,16 @@
     display: block;
   }
 
+  .feedback__input {
+    &:invalid {
+      box-shadow: none;
+      border: 2px solid red;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
   //-------FOOTER
   .footer {
     padding: 46px 0 152px;
