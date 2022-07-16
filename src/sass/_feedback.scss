@@ -41,6 +41,7 @@
   }
   &:invalid {
     box-shadow: inset 0 0 0 1px red;
+    animation: inputInvalid 0.3s ease-in-out forwards;
     & ~ .feedback__button {
       opacity: 0.5;
     }
@@ -50,6 +51,36 @@
     &:focus {
       box-shadow: inset 0 0 0 2px red;
     }
+  }
+}
+
+@keyframes inputInvalid {
+  0% {
+    transform: translateX(6px);
+  }
+  15% {
+    transform: translateX(-6px);
+  }
+  30% {
+    transform: translateX(4px);
+  }
+  45% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  65% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  95% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

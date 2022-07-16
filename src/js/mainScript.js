@@ -33,3 +33,6 @@ const menuLinks = document.querySelectorAll('.header__link');
 menuLinks.forEach(link => {
   link.onclick = () => document.body.classList.remove('menu-opened');
 });
+
+
+

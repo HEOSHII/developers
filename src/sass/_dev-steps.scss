@@ -66,13 +66,17 @@
   height: 60px;
   border-radius: 15px;
   border: 2px solid $primary-color;
-  background: none;
-  background-image: url(../img/slider-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 25%;
+  background: transparent;
   cursor: pointer;
   transition: all 0.2s, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    path {
+      stroke: black;
+    }
+  }
   &.prev {
     transform: rotate(180deg);
     &:active {
@@ -81,9 +85,11 @@
   }
   &:hover {
     background: $primary-color;
-    background-image: url(../img/slider-arrow-hover.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+    svg {
+      path {
+        stroke: white;
+      }
+    }
   }
   &:active {
     transform: scale(0.95);
