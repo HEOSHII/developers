@@ -1,86 +1,30 @@
-const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require('gulp-rename');
-const cleanCss = require('gulp-clean-css');
-const del = require('del');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
+import gulp from 'gulp';
+import paths from './gulp/config/path.js';
+import plugins from './gulp/config/plugins.js';
+import cleanDist from './gulp/tasks/cleanDist.js';
+import styles from './gulp/tasks/styles.js';
+import images from './gulp/tasks/images.js';
+import scripts from './gulp/tasks/scripts.js';
+import html from './gulp/tasks/html.js';
+import watch from './gulp/tasks/watch.js';
+import reload from './gulp/tasks/reload.js';
 
-const paths = {
-  styles: {
-    src: 'src/sass/**/*.scss',
-    dest: 'dist/css/',
-  },
-  scripts: {
-    src: 'src/js/**/*.js',
-    dest: 'dist/js/',
-  },
-  images: {
-    src: 'src/img/*',
-    dest: 'dist/img/',
-  },
+global.app = {
+  gulp,
+  paths,
+  plugins,
 };
 
-function cleanDist() {
-  return del(['dist']);
-}
+global.task = {
+  move: {
+    styles,
+    images,
+    scripts,
+    html,
+  },
+  reload,
+};
 
-function scripts() {
-  return gulp
-    .src(paths.scripts.src, {
-      sourcemaps: true,
-    })
-    .pipe(
-      babel({
-        presets: ['@babel/env'],
-      }),
-    )
-    .pipe(uglify())
-    .pipe(concat('mainScript.min.js'))
-    .pipe(gulp.dest(paths.scripts.dest));
-}
-
-function img() {
-  return gulp.src(paths.images.src).pipe(imagemin()).pipe(gulp.dest(paths.images.dest));
-}
-
-function styles() {
-  return gulp
-    .src(paths.styles.src)
-    .pipe(sourcemaps.init())
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(
-      cleanCss({
-        level: 2,
-      }),
-    )
-    .pipe(
-      rename({
-        basename: 'style',
-        suffix: '.min',
-      }),
-    )
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.styles.dest));
-}
-
-const build = gulp.series(cleanDist, gulp.parallel(styles, scripts, img), watch);
-
-function watch() {
-  gulp.watch(paths.styles.src, styles);
-  gulp.watch(paths.scripts.src, scripts);
-  gulp.watch(paths.images.src, img);
-}
-
-exports.cleanDist = cleanDist;
-exports.img = img;
-exports.styles = styles;
-exports.scripts = scripts;
-exports.watch = watch;
-exports.build = build;
-exports.default = build;
+const mainTasks = gulp.parallel(styles, images, scripts, html);
+gulp.task('build', gulp.series(cleanDist, mainTasks));
+gulp.task('watch', gulp.series('build', watch));
