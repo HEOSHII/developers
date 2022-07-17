@@ -1,0 +1,64 @@
+<section class="feedback" id="feedback">
+  <div class="feedback__content container">
+    <h2 class="feedback__title title">Обсудить проект</h2>
+    <p class="feedback__text subtitle">
+      Расскажите о своих бизнес-целях и мы поможем вам в их достижении
+    </p>
+    <form class="feedback__form form" action="">
+      <label class="feedback__label" for="name">
+        <input
+          class="feedback__input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Имя"
+          minlength="3"
+          pattern="[A-Za-zА-Яа-яЁё]+"
+          title="Используйте только латинские символы и киррилицу"
+        />
+        <p class="feedback__error">*только буквы от 3х символов</p>
+      </label>
+
+      <label class="feedback__label" for="telegram">
+        <input
+          class="feedback__input"
+          type="text"
+          id="telegram"
+          name="tg"
+          placeholder="Telegram/Viber"
+          pattern="[A-Za-z]+"
+          title="Используйте только латинские"
+        />
+        <p class="feedback__error">*только латинские символы</p>
+      </label>
+
+      <label for="email" class="feedback__label" for="email">
+        <input
+          class="feedback__input"
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+          title="Пример: example@gmail.com"
+        />
+        <p class="feedback__error">*только email</p>
+      </label>
+      <button class="feedback__button button" type="submit">Отправить</button>
+    </form>
+    <img class="feedback__call-mobile" src="@img/call-mobile.svg" alt="call-mobile" />
+  </div>
+  <img class="background-item feedback__phone" src="@img/phone.svg" alt="phone" data-distance="7" />
+  <img
+    class="background-item feedback__ligth-blue-sphere"
+    src="@img/light-blue-sphere.svg"
+    alt="ligth-blue-sphere"
+    data-distance="1"
+  />
+  <img
+    class="background-item feedback__purple-wave"
+    src="@img/purple-wave-reverse.svg"
+    alt="purple-wave"
+    data-distance="3"
+  />
+</section>
