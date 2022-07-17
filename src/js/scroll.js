@@ -14,7 +14,7 @@ const links = {
 const headerList = document.querySelector('.header__list');
 
 window.onscroll = function () {
-  const scrolled = this.pageYOffset - 10;
+  const scrolled = this.pageYOffset + 50;
   scrolled >= offsetTop.included && scrolled < offsetTop.devSteps
     ? links.included.classList.add('active')
     : links.included.classList.remove('active');
